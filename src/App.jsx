@@ -49,10 +49,10 @@
 //CON REACT ROUTER DOM:
 
 
-import './index.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Home, Catalog, ErrorPage } from './pages';
 import { Navbar } from './components/navbar/navbar.jsx';
+import './index.css';
 
 export default function App() {
   return (

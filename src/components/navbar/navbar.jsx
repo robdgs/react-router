@@ -1,6 +1,6 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import styles from "./navbar.module.scss";
+import { NavLink } from "react-router-dom";
 
 export const Navbar = () => {
   const links = [
@@ -37,7 +37,7 @@ export const Navbar = () => {
               // aggiunge le info su "è attivo/non è attivo" e per questo motivo sarà il componente che
               //userò nelle navbar.
               //l'active si riferisce alla mia posizione attuale
-            >
+           >
               {label}
             </NavLink>
           </li>
