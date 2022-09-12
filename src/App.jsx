@@ -68,3 +68,15 @@ export default function App() {
     </div>
   );
 }
+// browserRouter lo andremo ad utilizzare al 99% delle volte
+// la configurazione  sarà a carico della libreria.
+//BrowserRouter vede sì qual è lo stato applicativo e il resto ma 
+// prende questi dati e si occupa di passarli all'interno di un contesto che
+//poi deve essere utilizzato da un ulteriore componente, che è 
+// Routes, questo componente ha la gestione delle rotte.
+//il componente routes è  è il modo pricipale per renderizzare qualcosa su react router basandoci
+//sulla location corrente.
+// il routes ingloba le varie route che vengono renderizzate in maniera facoltativa se il path
+//coincide con quello che abbiamo attualmente all'interno dell'url
+// 
+//
