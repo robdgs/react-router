@@ -48,25 +48,27 @@
 //CON REACT ROUTER DOM:
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Home, Catalog, ErrorPage } from "./pages";
+import { Home, Category, ErrorPage } from "./pages";
 import { Navbar } from "./components/navbar/navbar.jsx";
 import { useFetch } from "./utils/api/use-fetch";
 import { ENDPOINTS } from "./utils/api/endpoints";
 import "./index.css";
 
 export default function App() {
-  const { data, loading, error } = useFetch(ENDPOINTS.CATEGORIES );
-  console.log(data,loading,error);
+  const { data, loading, error } = useFetch(ENDPOINTS.CATEGORIES);
+  console.log(data, loading, error);
   return (
     <div>
       <BrowserRouter>
         <Navbar />
-        {loading && 'caricando'}
-        {(!!error) && "si è verificato un errore"}
-        {data ? <div>{JSON.stringify(data)}</div> : null}
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/catalogo" element={<Catalog />} />
+          <Route path="/catalogo" element={<Home />} />
+          <Route path="/catalogo/:categoryName" element={<Category />} />
+          <Route
+            path="/catalogo/:categoryName/new"
+            element={<ErrorPage status={500} />}
+          />
           <Route path="*" element={<ErrorPage name="prova" status={404} />} />
         </Routes>
       </BrowserRouter>

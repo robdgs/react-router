@@ -12,7 +12,7 @@ export const useFetch = (url) => {
   //andiamo a definire tre stati:
   const [loading, setLoading] = useState(false); //voglio o true o false
   const [data, setData] = useState(null); //voglio o null o Response
-  const [error, setError] = useState(null); // vogliamo che sia o null o Error
+  const [error, setError] = useState(null); // vogliamo che sia o null o Error (o false)
 
   //stabilisco che se non abbiamo l'url (non esiste) facciamo un throw di un errore:
   if (!url?.length) {
@@ -40,6 +40,19 @@ export const useFetch = (url) => {
        .finally(()=>{
         setLoading(false);
        });
+
+       // (async function () {
+    //   try {
+    //     const res = await fetch(url).then((res) => res.json());
+    //     setData(res);
+    //     setError(false);
+    //   } catch (e) {
+    //     setError(err.message);
+    //   } finally {
+    //     setLoading(false);
+    //   }
+    // })();
+
   }, []);
 
   return { loading, data, error };

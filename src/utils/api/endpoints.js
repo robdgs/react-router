@@ -23,7 +23,7 @@ export const ENDPOINTS = {
 
 //mentre invece usando un getter dentro l'oggetto posso comporre le url direttamente lì.
 
-fetch(`${ENDPOINTS.SEARCH}?s=Arrabiata`)
-  .then((res) => res.json())
-  //friendly reminder che res è un oggetto
-  .then(console.log);
+// fetch(`${ENDPOINTS.SEARCH}?s=Arrabiata`)
+//   .then((res) => res.json())
+//   //friendly reminder che res è un oggetto
+//   .then(console.log);
