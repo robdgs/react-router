@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { CategoryList } from '../../components/category-list/index.js';
-
+//
 export const Home = () => {
   const data = useLoaderData();
   console.log('sono in home', data);
