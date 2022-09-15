@@ -1,5 +1,5 @@
 import React from 'react';
-import {CategoryListItem} from '../category-list-item';
+import { CategoryListItem } from '../category-list-item';
 
 export const CategoryList = (props) => {
   const { categories = [] } = props;

@@ -16,7 +16,6 @@ export const CategoryListItem = (props) => {
       </div>
       <div className={styles.content}>
         <h3 className={styles.title}>{category.strCategory}</h3>
-        <p className={styles.description}>{category.strCategoryDescription}</p>
       </div>
       <Link
         to={`/catalogo/${category.strCategory}`}
